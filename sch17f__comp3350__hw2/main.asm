@@ -19,8 +19,11 @@ ExitProcess proto,dwExitCode:dword
 		mov edx, 0
 		
 		mov al, input[0]
-		mov ax, input[1]
-		add ax, al
+		mov ah, input[1]
+		mov dl, shift
+		add ah, dl
+		add al, dl
+
 		
 	
 	invoke ExitProcess, 0
