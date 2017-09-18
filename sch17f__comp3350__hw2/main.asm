@@ -24,7 +24,11 @@ ExitProcess proto,dwExitCode:dword
 		add ah, dl
 		add al, dl
 
-		
+		mov bl, input[2]
+		mov bh, input[3]
+		add bh, shift
+		add bl, dl
+
 	
 	invoke ExitProcess, 0
 	main endp
